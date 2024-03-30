@@ -1,80 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-       .image img {
-        max-height: 100vh; 
-           width: auto; 
-           display: block;
-}
+    <link rel="stylesheet" href="styles.css" />
+    <style></style>
+  </head>
 
-        .container{
-            display: flex;
-            align-items: center;
-            justify-content:space-between;
-            border: 5px solid orange;
-        }
-        .image{
-            border: 5px solid blue;
-        }
-        .right_container{
-            display: flex;
-            
-            width:;
-            justify-content: center;
-
-            border: 5px solid red;
-        }
-        form{border: 5px solid green;
-        }
-        form label {
-	display: block;
-	font-size: 0.8rem;}
-    .row{
-        display: flex;
-        padding: px;
-        border: 2px solid black;
-    }
-        
-
-
-    </style>
-    
-
-</head>
-<body>
+  <body>
     <div class="container">
-        <div class="image">
-            <img src="images/halie-west-25xggax4bSA-unsplash.jpg" alt="Your Image">
+      <div class="left_container">
+        <div class="logo">
+          <img src="images/odin-lined.png" alt="Your Image" />
+          <h1>Odin</h1>
         </div>
-        <div class="right_container">
-            <form>
-                <div class="row">
-                    <label for="first_name">FIRST NAME</label>
-                    <input type="text" id="first_name" name="first_name" required>
-                    <label for="last_name">LAST NAME</label>
-                    <input type="text" id="last_name" name="last_name" required>
+      </div>
+
+      <div class="right_container">
+        <form>
+          <div class="r1">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              modi nostrum dignissimos consequatur repudiandae
+              <em>now</em> praesentium asperiores.
+            </p>
+            <p>You <em>know</em> you want to</p>
+          </div>
+          <div class="r2">
+            <div class="row">
+              <div class="mod">
+                <label for="first_name">FIRST NAME</label>
+                <input type="text" id="first_name" name="first_name" placeholder="firstname" required />
+              </div>
+              <div class="mod">
+                <label for="last_name">LAST NAME</label>
+                <input type="text" id="last_name" name="last_name" placeholder="lastname" required />
+              </div>
+            </div>
+            <div class="row">
+              <div class="mod">
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" placeholder="xyz@email.com" required />
+              </div>
+              <div class="mod">
+                <label for="phno">PHONE NUMBER</label>
+                <input type="tel" id="phno" name="phno" minlength="10" maxlength="10" placeholder="XXXXXXXXXX"required />
+              </div>
+            </div>
+            <div class="row">
+              <div class="mod">
+                <label for="password1">PASSWORD</label>
+                <input
+                  type="password"
+                  id="password1"
+                  name="password1"
+                  placeholder="password"
+                  required
+                />
+              </div>
+              <div class="mod">
+                <label for="password2">CONFIRM PASSWORD</label>
+                <input
+                  type="password"
+                  id="password2"
+                  name="password2"
+                  placeholder="password"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="r3">
+            <button class="btn" type="submit">Create Account</button>
+            <div class="lasttext">
+                <div class="?">
+                    Already have an account? 
                 </div>
-                <div class="row">
-                    <label for="email">EMAIL</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="phno">PHONE NUMBER</label>
-                    <input type="tel" id="phno" name="phno" required>
+                <div class="login">
+                     Log in
                 </div>
-                <div class="row">
-                    <label for="password1">PASSWORD</label>
-                    <input type="password" id="password1" name="password1" required>
-                    <label for="password2">CONFIRM PASSWORD</label>
-                    <input type="password" id="password2" name="password2" required>
-                </div>
-                <button type="submit">Create Account</button>
-                
-            </form>
-        </div>
-    </div>
-</body>
+            </div>
+  </body>
 </html>
