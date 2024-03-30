@@ -18,7 +18,7 @@
       </div>
 
       <div class="right_container">
-        <form>
+        <form id="registrationForm">
           <div class="r1">
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi
@@ -27,60 +27,110 @@
             </p>
             <p>You <em>know</em> you want to</p>
           </div>
+
           <div class="r2">
-            <div class="row">
-              <div class="mod">
-                <label for="first_name">FIRST NAME</label>
-                <input type="text" id="first_name" name="first_name" placeholder="firstname" required />
+            <fieldset>
+              <legend>Let's do this!</legend>
+              <div class="row">
+                <div class="mod">
+                  <label for="first_name">FIRST NAME</label>
+                  <input
+                    type="text"
+                    id="first_name"
+                    name="first_name"
+                    placeholder="firstname"
+                    required
+                  />
+                </div>
+                <div class="mod">
+                  <label for="last_name">LAST NAME</label>
+                  <input
+                    type="text"
+                    id="last_name"
+                    name="last_name"
+                    placeholder="lastname"
+                    required
+                  />
+                </div>
               </div>
-              <div class="mod">
-                <label for="last_name">LAST NAME</label>
-                <input type="text" id="last_name" name="last_name" placeholder="lastname" required />
+              <div class="row">
+                <div class="mod">
+                  <label for="email">EMAIL</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="xyz@email.com"
+                    required
+                  />
+                </div>
+                <div class="mod">
+                  <label for="phno">PHONE NUMBER</label>
+                  <input
+                    type="tel"
+                    id="phno"
+                    name="phno"
+                    minlength="10"
+                    maxlength="10"
+                    placeholder="XXXXXXXXXX"
+                    required
+                  />
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="mod">
-                <label for="email">EMAIL</label>
-                <input type="email" id="email" name="email" placeholder="xyz@email.com" required />
+              <div class="row">
+                <div class="mod">
+                  <label for="password1">PASSWORD</label>
+                  <input
+                    type="password"
+                    id="password1"
+                    name="password1"
+                    placeholder="password"
+                    required
+                  />
+                </div>
+                <div class="mod">
+                  <label for="password2">CONFIRM PASSWORD</label>
+                  <input
+                    type="password"
+                    id="password2"
+                    name="password2"
+                    placeholder="password"
+                    required
+                  />
+                </div>
               </div>
-              <div class="mod">
-                <label for="phno">PHONE NUMBER</label>
-                <input type="tel" id="phno" name="phno" minlength="10" maxlength="10" placeholder="XXXXXXXXXX"required />
+              <div id="passwordError" style="color: red; display: none">
+                Passwords do not match.
               </div>
-            </div>
-            <div class="row">
-              <div class="mod">
-                <label for="password1">PASSWORD</label>
-                <input
-                  type="password"
-                  id="password1"
-                  name="password1"
-                  placeholder="password"
-                  required
-                />
-              </div>
-              <div class="mod">
-                <label for="password2">CONFIRM PASSWORD</label>
-                <input
-                  type="password"
-                  id="password2"
-                  name="password2"
-                  placeholder="password"
-                  required
-                />
-              </div>
-            </div>
+            </fieldset>
           </div>
 
           <div class="r3">
             <button class="btn" type="submit">Create Account</button>
             <div class="lasttext">
-                <div class="?">
-                    Already have an account? 
-                </div>
-                <div class="login">
-                     Log in
-                </div>
+              <div class="?">Already have an account?</div>
+              <div class="login">Log in</div>
             </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          var password1 = document.getElementById("password1").value;
+          var password2 = document.getElementById("password2").value;
+          if (password1 !== password2) {
+            document.getElementById("passwordError").style.display = "block";
+          } else {
+            document.getElementById("passwordError").style.display = "none";
+            // Submit the form if passwords match
+            this.submit();
+          }
+        });
+    </script>
   </body>
 </html>
